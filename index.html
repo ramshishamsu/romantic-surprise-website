@@ -41,20 +41,49 @@
   <h2>Our Special Moments 💕</h2>
   <div class="memories-gallery">
     <div class="memory-card">
-      <img src="memories/photo1.jpeg" alt="Memory 1">
-      <p>When we first met...</p>
+      <div class="photo-container">
+        <img src="memories/photo1.jpeg" alt="Memory 1" class="memory-photo">
+        <div class="photo-overlay">
+          <span class="overlay-text">When we first met...</span>
+        </div>
+      </div>
+      <p class="memory-title">When we first met...</p>
     </div>
     <div class="memory-card">
-      <img src="memories/photo2.jpeg" alt="Memory 2">
-      <p>Our first date...</p>
+      <div class="photo-container">
+        <img src="memories/photo2.jpeg" alt="Memory 2" class="memory-photo">
+        <div class="photo-overlay">
+          <span class="overlay-text">Our first date...</span>
+        </div>
+      </div>
+      <p class="memory-title">Our first date...</p>
     </div>
     <div class="memory-card">
-      <img src="memories/photo3.jpeg" alt="Memory 3">
-      <p>The day you proposed...</p>
+      <div class="photo-container">
+        <img src="memories/photo3.jpeg" alt="Memory 3" class="memory-photo">
+        <div class="photo-overlay">
+          <span class="overlay-text">The day you proposed...</span>
+        </div>
+      </div>
+      <p class="memory-title">The day you proposed...</p>
     </div>
     <div class="memory-card">
-      <img src="memories/photo4.jpeg" alt="Memory 4">
-      <p>Our wedding day...</p>
+      <div class="photo-container">
+        <img src="memories/photo4.jpeg" alt="Memory 4" class="memory-photo">
+        <div class="photo-overlay">
+          <span class="overlay-text">Our wedding day...</span>
+        </div>
+      </div>
+      <p class="memory-title">Our wedding day...</p>
+    </div>
+    <div class="memory-card">
+      <div class="photo-container">
+        <img src="memories/photo5.jpeg" alt="Memory 5" class="memory-photo">
+        <div class="photo-overlay">
+          <span class="overlay-text">Our forever together...</span>
+        </div>
+      </div>
+      <p class="memory-title">Our forever together...</p>
     </div>
   </div>
   <button onclick="unlockPage()">Next →</button>
@@ -79,6 +108,9 @@
   <div id="hearts"></div>
   <div class="letter-content">
     <h2>My Love Letter 💌</h2>
+    <div class="letter-image-container">
+      <img src="memories/letter-image.jpg" alt="Love Letter" class="letter-image">
+    </div>
     <p id="typeLetter" class="love-letter"></p>
     <div id="letterActions" class="hidden">
       <button onclick="showGame()">Play Our Love Game 🎮</button>
@@ -100,7 +132,7 @@
         <p>Score: <span id="score">0</span></p>
       </div>
     </div>
-    <button onclick="showSurpriseGift()">Next → Surprise Gift 🎁</button>
+    <button onclick="showSurpriseGift()">Next → Surprise Gift 🎁</div>button>
   </div>
 </div>
 
