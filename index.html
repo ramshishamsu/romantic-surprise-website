@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️ - Special Surprise</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="music/musiclove-song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="landing">
+  <div class="landing-content">
+    <h1>Hey My Love ❤️</h1>
+    <p class="subtitle">I have something special for you...</p>
+    <button onclick="showProposal()">I want to show you some special moments of us</button>
+    <button id="musicToggle" onclick="toggleMusic()">🎵 Play Music</button>
+  </div>
+</div>
+
+<div id="proposal" class="hidden">
+  <div class="proposal-content">
+    <h1>Dear, will you be my love? 💕</h1>
+    <div class="proposal-buttons">
+      <button id="yesBtn" onclick="handleYes()">Yes 💖</button>
+      <button id="noBtn" onclick="handleNo()">No 😊</button>
+    </div>
+    <p id="proposalCaption" class="proposal-caption hidden">Don't waste time to follow no! 😊</p>
+  </div>
+</div>
+
+<div id="memories" class="hidden">
+  <h2>Our Special Moments 💕</h2>
+  <div class="memories-gallery">
+    <div class="memory-card">
+      <img src="memories/photo1.jpeg" alt="Memory 1">
+      <p>When we first met...</p>
+    </div>
+    <div class="memory-card">
+      <img src="memories/photo2.jpeg" alt="Memory 2">
+      <p>Our first date...</p>
+    </div>
+    <div class="memory-card">
+      <img src="memories/photo3.jpeg" alt="Memory 3">
+      <p>The day you proposed...</p>
+    </div>
+    <div class="memory-card">
+      <img src="memories/photo4.jpeg" alt="Memory 4">
+      <p>Our wedding day...</p>
+    </div>
+  </div>
+  <button onclick="unlockPage()">Next →</button>
+</div>
+
+<div id="unlock" class="hidden">
+  <div class="unlock-content">
+    <h2>Hey handsome ❤️</h2>
+    <p>Type this to unlock my surprise love letter</p>
+    <div class="secret-text">
+      <b>"I love you my dear wife"</b>
+    </div>
+    <div class="input-group">
+      <input id="secretInput" type="text" placeholder="Type here..." onkeypress="handleEnter(event)">
+      <button onclick="checkPassword()">Submit 💕</button>
+    </div>
+    <p id="errorMsg" class="error-msg"></p>
+  </div>
+</div>
+
+<div id="letterPage" class="hidden">
+  <div id="hearts"></div>
+  <div class="letter-content">
+    <h2>My Love Letter 💌</h2>
+    <p id="typeLetter" class="love-letter"></p>
+    <div id="letterActions" class="hidden">
+      <button onclick="showGame()">Play Our Love Game 🎮</button>
+      <button onclick="saveMemory()">Save This Memory 💾</button>
+    </div>
+  </div>
+</div>
+
+<div id="gamePage" class="hidden">
+  <div class="game-content">
+    <h2>Our Love Game 💕</h2>
+    <p>How well do you know our love story?</p>
+    <div id="gameContainer">
+      <div id="questionContainer">
+        <p id="question"></p>
+        <div id="answers"></div>
+      </div>
+      <div id="gameScore">
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+    <button onclick="showSurpriseGift()">Next → Surprise Gift 🎁</button>
+  </div>
+</div>
+
+<div id="surpriseGiftPage" class="hidden">
+  <div class="surprise-content">
+    <h2>🎁 A Special Surprise For You! 🎁</h2>
+    <div class="surprise-animation">
+      <div class="gift-box">🎁</div>
+      <div class="sparkles">✨</div>
+    </div>
+    <p class="surprise-message">My love, you've completed our journey together!</p>
+    <p class="surprise-subtitle">This website is my gift to you - a place where our memories live forever</p>
+    <div class="surprise-details">
+      <div class="detail-card">
+        <h3>💝 Our Love Story</h3>
+        <p>From the moment we met to forever together</p>
+      </div>
+      <div class="detail-card">
+        <h3>🎵 Our Song</h3>
+        <p>The music that plays when we think of each other</p>
+      </div>
+      <div class="detail-card">
+        <h3>📸 Our Memories</h3>
+        <p>Captured forever in this digital heart</p>
+      </div>
+    </div>
+    <div class="final-actions">
+      <button onclick="restart()">Start Over 🔄</button>
+      <button onclick="saveOurMemory()">Save This Moment �</button>
+    </div>
+  </div>
+</div>
+
+<div id="finalPage" class="hidden">
+  <div class="final-content">
+    <h1>I Love You Forever! 💕</h1>
+    <div class="final-animation">
+      <div class="heart-beat">❤️</div>
+    </div>
+    <p>Thank you for being my everything!</p>
+    <button onclick="restart()">Start Over 🔄</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
