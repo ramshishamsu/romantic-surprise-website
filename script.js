@@ -4,6 +4,93 @@ let currentQuestionIndex = 0;
 let gameScore = 0;
 let yesButtonTimer = null;
 let noButtonAttempts = 0;
+let currentPhotoIndex = 0;
+
+// Photo data for slideshow
+const photos = [
+    {
+        src: "memories/photo1.jpeg",
+        title: "When we first met...",
+        overlay: "When we first met..."
+    },
+    {
+        src: "memories/photo2.jpeg", 
+        title: "Our first date...",
+        overlay: "Our first date..."
+    },
+    {
+        src: "memories/photo3.jpeg",
+        title: "Falling in love...",
+        overlay: "Falling in love..."
+    },
+    {
+        src: "memories/photo4.jpeg",
+        title: "Our adventures together...",
+        overlay: "Our adventures together..."
+    },
+    {
+        src: "memories/photo5.jpeg",
+        title: "Growing closer...",
+        overlay: "Growing closer..."
+    },
+    {
+        src: "memories/photo6.jpeg",
+        title: "Forever together...",
+        overlay: "Forever together..."
+    }
+];
+
+// Slideshow functions
+function nextPhoto() {
+    if (currentPhotoIndex < photos.length - 1) {
+        currentPhotoIndex++;
+        updatePhoto();
+    }
+}
+
+function previousPhoto() {
+    if (currentPhotoIndex > 0) {
+        currentPhotoIndex--;
+        updatePhoto();
+    }
+}
+
+function updatePhoto() {
+    const currentPhoto = document.getElementById("currentPhoto");
+    const memoryText = document.getElementById("memoryText");
+    const photoCounter = document.getElementById("photoCounter");
+    const prevBtn = document.querySelector('.nav-btn:first-child');
+    const nextBtn = document.querySelector('.nav-btn:last-child');
+    
+    if (currentPhoto && memoryText) {
+        // Fade out current photo
+        currentPhoto.style.opacity = "0";
+        
+        setTimeout(() => {
+            // Update photo source and text
+            currentPhoto.src = photos[currentPhotoIndex].src;
+            memoryText.textContent = photos[currentPhotoIndex].title;
+            
+            // Update counter
+            if (photoCounter) {
+                photoCounter.textContent = `${currentPhotoIndex + 1} / ${photos.length}`;
+            }
+            
+            // Update button states
+            if (prevBtn) {
+                prevBtn.disabled = currentPhotoIndex === 0;
+            }
+            if (nextBtn) {
+                nextBtn.disabled = currentPhotoIndex === photos.length - 1;
+            }
+            
+            // Fade in new photo
+            setTimeout(() => {
+                currentPhoto.style.opacity = "1";
+            }, 100);
+        }, 300);
+    }
+}
 
 // Love letter text
 const loveLetter = `My love,
@@ -120,11 +207,37 @@ function handleNo() {
     }
 }
 
+// Fullscreen functionality
+function openFullscreen() {
+    const loveImage = document.querySelector('.love-image');
+    if (loveImage) {
+        if (loveImage.requestFullscreen) {
+            loveImage.requestFullscreen();
+        } else if (loveImage.webkitRequestFullscreen) {
+            loveImage.webkitRequestFullscreen();
+        } else if (loveImage.msRequestFullscreen) {
+            loveImage.msRequestFullscreen();
+        }
+    }
+}
+
+function openPhotoFullscreen() {
+    const photoContainer = document.querySelector('.photo-container');
+    if (photoContainer) {
+        if (photoContainer.requestFullscreen) {
+            photoContainer.requestFullscreen();
+        } else if (photoContainer.webkitRequestFullscreen) {
+            photoContainer.webkitRequestFullscreen();
+        } else if (photoContainer.msRequestFullscreen) {
+            photoContainer.msRequestFullscreen();
+        }
+    }
+}
+
 // Page navigation functions
 function showMemories() {
     document.getElementById("landing").classList.add("hidden");
     document.getElementById("memories").classList.remove("hidden");
-    animateMemoryCards();
 }
 
 function unlockPage() {

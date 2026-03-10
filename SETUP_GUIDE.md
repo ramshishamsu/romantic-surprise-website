@@ -1,82 +1,175 @@
-# 🎵📸 How to Add Your Music and Photos
+# 🎨 Setup Guide
 
-## 🎵 Adding Your Music
+Personalize your romantic surprise website with your own photos and music!
 
-### Step 1: Choose Your Song
-- Pick your most romantic song together
-- Make sure it's in **MP3 format**
-- Rename it exactly: **`love-song.mp3`**
+## 📸 Step 1: Add Your Photos
 
-### Step 2: Add to Folder
-- Copy your song to this folder:
-  ```
-  c:\Users\ramsh\OneDrive\Desktop\surprise gift\music\love-song.mp3
-  ```
+### Required Photos (6 total)
+Place these photos in the `memories/` folder:
 
-### Step 3: Test It
-- Open the website
-- Click the "🎵 Play Music" button
-- Your song should play! 🎶
-
----
-
-## 📸 Adding Your Photos
-
-### Step 1: Choose Your 4 Special Photos
-1. **When you first met** → Rename to: `photo1.jpg`
-2. **Your first date** → Rename to: `photo2.jpg`
-3. **The proposal** → Rename to: `photo3.jpg`
-4. **Wedding day** → Rename to: `photo4.jpg`
-
-### Step 2: Add to Folder
-- Copy all 4 photos to this folder:
-  ```
-  c:\Users\ramsh\OneDrive\Desktop\surprise gift\memories\
-  ```
-
-### Step 3: Final Folder Structure
-Your folders should look like this:
 ```
-surprise gift/
-├── index.html
-├── style.css
-├── script.js
-├── music/
-│   └── love-song.mp3      ← YOUR SONG HERE
-├── memories/
-│   ├── photo1.jpg          ← YOUR PHOTO 1
-│   ├── photo2.jpg          ← YOUR PHOTO 2
-│   ├── photo3.jpg          ← YOUR PHOTO 3
-│   └── photo4.jpg          ← YOUR PHOTO 4
-└── README.md
+memories/
+├── photo1.jpeg  # When we first met
+├── photo2.jpeg  # Our first date  
+├── photo3.jpeg  # Falling in love
+├── photo4.jpeg  # Our adventures together
+├── photo5.jpeg  # Growing closer
+└── photo6.jpeg  # Forever together
 ```
 
+### Photo Requirements
+- **Format**: JPEG (.jpeg)
+- **Size**: Any size (website will resize automatically)
+- **Quality**: High quality for best results
+- **Orientation**: Can be portrait or landscape
+
+### Photo Tips
+- Choose your most romantic moments together
+- Include photos from different stages of your relationship
+- Make sure photos are clear and well-lit
+- Consider the memory text when selecting photos
+
+## 🎵 Step 2: Add Your Music
+
+### Required Music File
+Place your romantic song in the `music/` folder:
+
+```
+music/
+└── musiclove-song.mp3  # Your romantic background music
+```
+
+### Music Requirements
+- **Format**: MP3 (.mp3)
+- **Name**: Must be exactly `musiclove-song.mp3`
+- **Length**: Any length (will loop automatically)
+- **Quality**: Good audio quality recommended
+
+### Music Suggestions
+- Your special song as a couple
+- Romantic instrumental music
+- A song that reminds you of your love
+- Soft, romantic background music
+
+## 💝 Step 3: Customize the Love Letter
+
+### Edit the Love Letter Text
+Open `script.js` and find the `loveLetter` variable:
+
+```javascript
+const loveLetter = `My love,
+
+You have been my everything since the day we met. Even after marriage, our love keeps growing stronger. You work hard for us every day, and I fall in love with you harder every single day. Thank you for loving me every day, even with my crazy mood swings. I love you forever!
+
+Forever yours,
+[Your Name]`;
+```
+
+### Personalization Tips
+- **Be authentic**: Write from your heart
+- **Include memories**: Mention specific moments together
+- **Be romantic**: Use loving and affectionate language
+- **Keep it personal**: Include inside jokes or nicknames
+- **Sign your name**: Make it personal to you both
+
+## 🔐 Step 4: Set Your Password
+
+### Change the Secret Phrase
+In `script.js`, find this line:
+
+```javascript
+let correct = "i love you my dear wife";
+```
+
+### Password Ideas
+- "i love you my dear wife"
+- "you are my everything"
+- "forever and always"
+- "my heart belongs to you"
+- Choose something meaningful to your relationship
+
+## 🎯 Step 5: Test Your Website
+
+### Local Testing
+1. Double-click `index.html` to open in browser
+2. Click through all pages to test:
+   - Landing page loads
+   - Proposal buttons work
+   - Photos display correctly
+   - Music plays (may need user interaction)
+   - Password works
+   - Love letter types correctly
+   - Game functions
+   - Surprise gift page
+
+### Troubleshooting
+- **Photos not showing**: Check file names and folder location
+- **Music not playing**: Try clicking the music button first
+- **Password not working**: Check for exact spelling and spaces
+- **Text not appearing**: Check JavaScript console for errors
+
+## 📱 Step 6: Mobile Testing
+
+### Test on Different Devices
+- **Desktop**: Full experience with large photos
+- **Tablet**: Responsive layout
+- **Mobile**: Touch-friendly interface
+
+### Browser Testing
+Test in multiple browsers:
+- Chrome
+- Safari  
+- Firefox
+- Edge
+
+## 🎨 Step 7: Final Touches
+
+### Review All Text
+Check all text throughout the website:
+- Landing page message
+- Proposal hint text
+- Memory descriptions
+- Love letter content
+- Game questions and answers
+
+### Check All Interactions
+- All buttons work correctly
+- Navigation flows smoothly
+- Animations play properly
+- Responsive design works
+
+## 🚀 Step 8: Deploy!
+
+### Quick Deploy Options
+1. **Netlify Drop**: Drag folder to netlify.com (2 minutes)
+2. **GitHub Pages**: Follow GITHUB_GUIDE.md (10 minutes)
+3. **Vercel**: Import repository (5 minutes)
+
+### Share Your Love
+Once deployed, share with your partner:
+- Send the URL directly
+- Create a romantic QR code
+- Share on social media
+- Send via email with romantic message
+
+## 💝 Success Tips
+
+### Make It Special
+- Choose photos that tell your love story
+- Write a heartfelt, personal love letter
+- Select music that's meaningful to you both
+- Test everything before sharing
+
+### Surprise Delivery Ideas
+- Send the link with a romantic message
+- Create a QR code and hide it in a card
+- Share during a special moment
+- Set up a surprise reveal
+
+## 🎉 Ready to Go!
+
+Your romantic surprise website is now personalized and ready to melt your partner's heart! 💕✨
+
 ---
 
-## 🚀 Quick Test
-
-1. **Add your music and photos**
-2. **Open `index.html`** in your browser
-3. **Click through the experience**
-4. **Enjoy your personalized romantic website!** 💕
-
----
-
-## 🎬 Perfect for Instagram
-
-Once everything is set up:
-- Record your screen going through the experience
-- The music will play during recording
-- Your actual photos will show
-- Perfect romantic reel for Instagram! 📱
-
----
-
-## 💡 Tips
-
-- **Photo size**: Best if photos are horizontal/landscape
-- **Music quality**: Use a high-quality MP3 for best sound
-- **File names**: EXACT names are important (case-sensitive)
-- **Backup**: Keep copies of your original photos and music
-
-Need help? Just ask! ❤️
+*Remember: The most important ingredient is your love! ❤️*

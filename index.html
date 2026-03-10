@@ -29,69 +29,49 @@
 <div id="proposal" class="hidden">
   <div class="proposal-content">
     <h1>Dear, will you be my love? 💕</h1>
+    <p class="proposal-hint">Don't waste time to follow no!😊</p>
     <div class="proposal-buttons">
       <button id="yesBtn" onclick="handleYes()">Yes 💖</button>
       <button id="noBtn" onclick="handleNo()">No 😊</button>
     </div>
-    <p id="proposalCaption" class="proposal-caption hidden">Don't waste time to follow no! 😊</p>
   </div>
 </div>
 
 <div id="memories" class="hidden">
-  <h2>Our Special Moments 💕</h2>
-  <div class="memories-gallery">
-    <div class="memory-card">
-      <div class="photo-container">
-        <img src="memories/photo1.jpeg" alt="Memory 1" class="memory-photo">
-        <div class="photo-overlay">
-          <span class="overlay-text">When we first met...</span>
-        </div>
-      </div>
-      <p class="memory-title">When we first met...</p>
+  <div class="memories-grid">
+    <div class="memory-item">
+      <img src="memories/photo1.jpeg" alt="Memory 1" class="memory-photo">
+      <p class="memory-text">When we first met...</p>
     </div>
-    <div class="memory-card">
-      <div class="photo-container">
-        <img src="memories/photo2.jpeg" alt="Memory 2" class="memory-photo">
-        <div class="photo-overlay">
-          <span class="overlay-text">Our first date...</span>
-        </div>
-      </div>
-      <p class="memory-title">Our first date...</p>
+    <div class="memory-item">
+      <img src="memories/photo2.jpeg" alt="Memory 2" class="memory-photo">
+      <p class="memory-text">Our first date...</p>
     </div>
-    <div class="memory-card">
-      <div class="photo-container">
-        <img src="memories/photo3.jpeg" alt="Memory 3" class="memory-photo">
-        <div class="photo-overlay">
-          <span class="overlay-text">The day you proposed...</span>
-        </div>
-      </div>
-      <p class="memory-title">The day you proposed...</p>
+    <div class="memory-item">
+      <img src="memories/photo3.jpeg" alt="Memory 3" class="memory-photo">
+      <p class="memory-text">Falling in love...</p>
     </div>
-    <div class="memory-card">
-      <div class="photo-container">
-        <img src="memories/photo4.jpeg" alt="Memory 4" class="memory-photo">
-        <div class="photo-overlay">
-          <span class="overlay-text">Our wedding day...</span>
-        </div>
-      </div>
-      <p class="memory-title">Our wedding day...</p>
+    <div class="memory-item">
+      <img src="memories/photo4.jpeg" alt="Memory 4" class="memory-photo">
+      <p class="memory-text">Our Wedding Reception...</p>
     </div>
-    <div class="memory-card">
-      <div class="photo-container">
-        <img src="memories/photo5.jpeg" alt="Memory 5" class="memory-photo">
-        <div class="photo-overlay">
-          <span class="overlay-text">Our forever together...</span>
-        </div>
-      </div>
-      <p class="memory-title">Our forever together...</p>
+    <div class="memory-item">
+      <img src="memories/photo5.jpeg" alt="Memory 5" class="memory-photo">
+      <p class="memory-text">Growing closer...</p>
+    </div>
+    <div class="memory-item">
+      <img src="memories/photo6.jpeg" alt="Memory 6" class="memory-photo">
+      <p class="memory-text">Forever together...</p>
     </div>
   </div>
-  <button onclick="unlockPage()">Next →</button>
+  <button onclick="unlockPage()" class="continue-btn">Continue to Love Letter →</button>
 </div>
 
 <div id="unlock" class="hidden">
   <div class="unlock-content">
-    <h2>Hey handsome ❤️</h2>
+    <div class="unlock-header">
+      <h2>Hey handsome ❤️</h2>
+    </div>
     <p>Type this to unlock my surprise love letter</p>
     <div class="secret-text">
       <b>"I love you my dear wife"</b>
@@ -108,9 +88,7 @@
   <div id="hearts"></div>
   <div class="letter-content">
     <h2>My Love Letter 💌</h2>
-    <div class="letter-image-container">
-      <img src="memories/letter-image.jpg" alt="Love Letter" class="letter-image">
-    </div>
+    <div class="letter-emoji">💕</div>
     <p id="typeLetter" class="love-letter"></p>
     <div id="letterActions" class="hidden">
       <button onclick="showGame()">Play Our Love Game 🎮</button>
@@ -132,7 +110,7 @@
         <p>Score: <span id="score">0</span></p>
       </div>
     </div>
-    <button onclick="showSurpriseGift()">Next → Surprise Gift 🎁</div>button>
+    <button onclick="showSurpriseGift()">Next → Surprise Gift 🎁</button>
   </div>
 </div>
 
@@ -161,7 +139,7 @@
     </div>
     <div class="final-actions">
       <button onclick="restart()">Start Over 🔄</button>
-      <button onclick="saveOurMemory()">Save This Moment �</button>
+      <button onclick="saveOurMemory()">Save This Moment 💾</button>
     </div>
   </div>
 </div>
